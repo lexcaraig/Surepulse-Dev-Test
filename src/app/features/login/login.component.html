@@ -1,0 +1,30 @@
+<header class="container text-center mt-5 mb-5">
+  <h1>Welcome to XZY Dashboard App!</h1>
+</header>
+
+<main class="container">
+  <section class="row d-flex justify-content-center">
+    <div class="col-13 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Login</h4>
+          <form [formGroup]="form" (ngSubmit)="onLogin()">
+            <fieldset class="form-group">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username" formControlName="username" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="password">Password</label>
+              <input type="text" name="password" id="password" formControlName="password" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="pull-right">
+                <button type="submit" class="btn btn-sm btn-primary">Login</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

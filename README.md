@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-## Development server
+## Prerequisite
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* node 5.3.1 or higher
+* @angular/cli@latest
 
-## Code scaffolding
+## Running on Development
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* clone this repository `git clone git@github.com:lexcaraig/Surepulse-Dev-Test.git`
+* install the dependencies, run `npm install`
+* run in dev server `ng serve -o` to open in a web browser
 
-## Build
+## Notes:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+start time of development: `8:04am ( Sunday, October 22, 2017 )`
+end time of development: `3:05pm ( Sunday, October 22, 2017 )`
 
-## Running unit tests
+## Reminder
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Due to the disconnection of our internet, I won't be able to start last friday night so I waited for the our internet connections to be online again for me to be able to start the `test`( Just to be completely pair with you guys! XD ). Thanks a lot!

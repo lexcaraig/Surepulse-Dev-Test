@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card">
+    <div class="card-block p-3">
+      <h4 class="card-title mt-3">List of Users</h4>
+      <table class="table table-hover mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Company</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | async | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.company.name }}</td>
+            <td>
+              <div class="btn-group">
+                <a [routerLink]="['/dashboard/users', user.id]" class="btn btn-sm btn-primary">
+                  View <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

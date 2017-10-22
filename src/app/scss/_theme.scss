@@ -1,0 +1,11 @@
+@import './variables';
+
+.xyz-theme__background-color {
+  background: -webkit-linear-gradient(50deg, $xyz-primary-color, $xyz-secondary-color);
+  background: linear-gradient(40deg, $xyz-primary-color, $xyz-secondary-color);
+  color: $xyz-text-white;
+}
+
+.xyz-theme__text-white {
+  color: #fff !important;
+}
