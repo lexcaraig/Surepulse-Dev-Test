@@ -1,3 +1,8 @@
+import { TodosComponent } from './pages/users/user-details/todos/todos.component';
+import { AlbumsComponent } from './pages/users/user-details/albums/albums.component';
+import { PhotosComponent } from './pages/users/user-details/photos/photos.component';
+import { CommentsComponent } from './pages/users/user-details/comments/comments.component';
+import { PostsComponent } from './pages/users/user-details/posts/posts.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,6 +23,7 @@ import { PhotosService } from "../../services/get/photos/photos.service";
 import { PostsService } from "../../services/get/posts/posts.service";
 import { TodosService } from "../../services/get/todos/todos.service";
 import { CommentsService } from "../../services/get/comments/comments.service";
+
 
 const routes: Routes = [
   {
@@ -42,7 +48,12 @@ const routes: Routes = [
     DashboardComponent,
     HeaderComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    PostsComponent,
+    CommentsComponent,
+    PhotosComponent,
+    AlbumsComponent,
+    TodosComponent
 ],
   providers: [
     UsersService,

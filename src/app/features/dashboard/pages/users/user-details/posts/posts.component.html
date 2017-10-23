@@ -1,0 +1,9 @@
+<div class="card mt-3" [ngClass]="{'mt-0': !first, 'mb-3': last}" *ngFor="let post of posts | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let first = first; let last = last; ">
+  <div class="card-block p-3">
+    <h6 class="card-title">{{ post.title }}</h6>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
+<div class="text-center mt-3 mb-3">
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>

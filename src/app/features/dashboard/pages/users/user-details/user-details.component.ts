@@ -16,6 +16,8 @@ import { Todo } from "../../../../../services/get/todos/todo.model";
 import { CommentsService } from "../../../../../services/get/comments/comments.service";
 import { Comment } from '../../../../../services/get/comments/comment.model';
 
+import { paginationConfig } from '../../../../../utils/constants/pagination-config';
+
 @Component({
   selector: 'xzy-dashboard-user-details',
   templateUrl: './user-details.component.html',
@@ -29,6 +31,10 @@ export class UserDetailsComponent implements OnInit {
   public comments: Comment[];
   public albums: Album[];
   public todos: Todo[];
+
+  public itemsPerPage: number = paginationConfig.itemsPerPage;
+  public currentPage: number = paginationConfig.currentPage;
+
   private id: number;
 
   constructor(

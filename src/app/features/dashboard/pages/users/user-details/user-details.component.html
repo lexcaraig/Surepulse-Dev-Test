@@ -55,61 +55,28 @@
   <ngb-tabset type="pills">
     <ngb-tab title="Posts">
       <ng-template ngbTabContent>
-        <div class="card mt-3" [ngClass]="{'mt-0': !first, 'mb-3': last}" *ngFor="let post of posts; let first = first; let last = last;">
-          <div class="card-block p-3">
-            <h6 class="card-title">{{ post.title }}</h6>
-            <p>{{ post.body }}</p>
-          </div>
-        </div>
+        <xzy-dashboard-posts [posts]="posts"></xzy-dashboard-posts>
       </ng-template>
     </ngb-tab>
     <ngb-tab title="Comments">
       <ng-template ngbTabContent>
-        <div class="card mt-3" [ngClass]="{'mt-0': !first, 'mb-3': last}" *ngFor="let comment of comments; let first = first; let last = last;">
-          <div class="card-block p-3">
-            <h5 class="card-title">{{ comment.name }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ comment.email }}</h6>
-            <p>{{ comment.body }}</p>
-          </div>
-        </div>
+        <xzy-dashboard-comments [comments]="comments"></xzy-dashboard-comments>
       </ng-template>
     </ngb-tab>
     <ngb-tab title="Photos">
       <ng-template ngbTabContent>
         <h4 class="mt-3">{{ u.name }}(s) photos</h4>
-        <div class="row">
-          <div class="col col-lg-2" *ngFor="let photo of photos">
-            <div class="card">
-              <img [src]="photo.thumbnailUrl" [alt]="photo.title">
-              <div class="card-block text-center">
-                <h5 class="card-title">{{ photo.title }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+        <xzy-dashboard-photos [photos]="photos"></xzy-dashboard-photos>
       </ng-template>
     </ngb-tab>
     <ngb-tab title="Albums">
       <ng-template ngbTabContent>
-        <div class="list-group mt-3 mb-3">
-          <button class="list-group-item list-group-item-action" *ngFor="let album of albums">
-            {{ album.title }}
-          </button>
-        </div>
+        <xzy-dashboard-albums [albums]="albums"></xzy-dashboard-albums>
       </ng-template>
     </ngb-tab>
     <ngb-tab title="Todos">
       <ng-template ngbTabContent>
-        <ul class="list-group mt-3">
-          <li *ngFor="let todo of todos"
-            class="list-group-item d-flex justify-content-between align-items-center">
-            {{ todo.title }}
-            <span class="badge badge-pill"
-              [ngClass]="{'badge-success': todo.completed, 'badge-danger': !todo.completed}">
-              {{ todo.completed ? 'Completed' : 'Not Completed' }}
-            </span>
-          </li>
-        </ul>
+        <xzy-dashboard-todos [todos]="todos"></xzy-dashboard-todos>
       </ng-template>
     </ngb-tab>
   </ngb-tabset>

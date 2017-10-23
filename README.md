@@ -10,6 +10,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Running on Development
 
 * clone this repository `git clone git@github.com:lexcaraig/Surepulse-Dev-Test.git`
+* ngx-pagination work arount
+    * change the version in `node_modules`
+    * `node_modules/ngx-pagination/dist/ngx-pagination.metadata.json`
+    * from version: 4 to version 3
 * install the dependencies, run `npm install`
 * run in dev server `ng serve -o` to open in a web browser
 

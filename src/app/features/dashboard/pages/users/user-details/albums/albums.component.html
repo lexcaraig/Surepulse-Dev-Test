@@ -1,0 +1,8 @@
+<div class="list-group mt-3 mb-3">
+  <button class="list-group-item list-group-item-action" *ngFor="let album of albums | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+    {{ album.title }}
+  </button>
+</div>
+<div class="text-center mt-3 mb-3">
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>

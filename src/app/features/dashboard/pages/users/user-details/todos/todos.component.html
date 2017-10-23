@@ -1,0 +1,13 @@
+<ul class="list-group mt-3">
+  <li *ngFor="let todo of todos | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }"
+    class="list-group-item d-flex justify-content-between align-items-center">
+    {{ todo.title }}
+    <span class="badge badge-pill"
+      [ngClass]="{'badge-success': todo.completed, 'badge-danger': !todo.completed}">
+      {{ todo.completed ? 'Completed' : 'Not Completed' }}
+    </span>
+  </li>
+</ul>
+<div class="text-center mt-3 mb-3">
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>
